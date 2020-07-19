@@ -2,3 +2,5 @@
 /public/
 /lib/
 /dist/
+
+.DS_Store

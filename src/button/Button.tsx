@@ -1,7 +1,7 @@
 import React from "react";
 import { BaseProps } from "../index";
 
-type ButtonProps = {
+export type ButtonProps = {
   onClick?: (event: React.MouseEvent) => void;
   variant?: "primary" | "secondary";
   active?: boolean;
@@ -24,6 +24,10 @@ const VARIANTS = {
 
 export const Button = ({ children, onClick, ...rest }: ButtonProps) => {
   const { active, disabled, pointerEvents = false, variant = "primary" } = rest;
+
+  if (disabled) {
+    onClick = undefined;
+  }
 
   const classes = [
     "outline-none",
