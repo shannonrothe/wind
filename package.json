@@ -2,9 +2,10 @@
   "name": "@shannonrothe/wind",
   "version": "1.0.3",
   "description": "A simple React component library built on TailwindCSS",
-  "main": "lib/index.js",
+  "main": "dist/wind.bundle.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:css && npx webpack --config webpack.config.js",
+    "build:css": "postcss src/tailwind.css -o src/wind.css",
     "test": "jest --passWithNoTests"
   },
   "keywords": [
@@ -19,8 +20,16 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.43",
+    "autoprefixer": "^9.8.5",
+    "css-loader": "^3.6.0",
+    "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^3.9.7"
+    "style-loader": "^1.2.1",
+    "tailwindcss": "^1.5.1",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
