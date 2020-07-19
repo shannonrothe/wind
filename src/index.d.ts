@@ -1,1 +1,1 @@
-declare module "wind";
+declare module "@shannonrothe/wind";
