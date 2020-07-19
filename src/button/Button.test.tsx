@@ -1,13 +1,15 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import { Button, ButtonProps } from "./Button";
+
+const createMockClickHandler = () => jest.fn((event: MouseEvent<HTMLElement>) => event.persist());
 
 describe("Button", () => {
   let defaultProps: ButtonProps = {};
 
   beforeEach(() => {
-    defaultProps.onClick = jest.fn();
+    defaultProps.onClick = createMockClickHandler();
   });
 
   it("renders", () => {
