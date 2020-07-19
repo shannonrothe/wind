@@ -5,6 +5,8 @@ module.exports = {
   output: {
     filename: "wind.bundle.js",
     path: path.resolve(__dirname, "dist"),
+    library: "@shannonrothe/wind",
+    libraryTarget: "umd",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],

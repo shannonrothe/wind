@@ -1,6 +1,6 @@
 {
   "name": "@shannonrothe/wind",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple React component library built on TailwindCSS",
   "main": "dist/wind.bundle.js",
   "scripts": {
