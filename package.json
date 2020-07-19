@@ -1,6 +1,6 @@
 {
   "name": "@shannonrothe/wind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple React component library built on TailwindCSS",
   "main": "lib/index.js",
   "scripts": {
@@ -14,13 +14,10 @@
   ],
   "author": "Shannon Rothe",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "typescript": "^3.9.7",
     "@types/react": "^16.9.43",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
-  },
-  "devDependencies": {
-    "typescript": "^3.9.7"
+    "react-dom": "^16.13.1"
   }
 }
