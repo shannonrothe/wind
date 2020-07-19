@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseProps } from "../../index";
+import { BaseProps } from "../index";
 
 type ButtonProps = {
   onClick?: (event: React.MouseEvent) => void;

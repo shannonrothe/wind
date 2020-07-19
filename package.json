@@ -1,11 +1,11 @@
 {
   "name": "@shannonrothe/wind",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple React component library built on TailwindCSS",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [
     "react",
@@ -15,9 +15,10 @@
   "author": "Shannon Rothe",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^3.9.7",
     "@types/react": "^16.9.43",
+    "jest": "^26.1.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.7"
   }
 }

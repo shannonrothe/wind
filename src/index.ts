@@ -2,4 +2,4 @@ export type BaseProps = {
   children?: string;
 };
 
-export { Button } from "./components/button/Button";
+export { Button } from "./button/Button";
