@@ -16,6 +16,7 @@
   "author": "Shannon Rothe",
   "license": "MIT",
   "dependencies": {
+    "@types/react-dom": "^16.9.8",
     "jest": "^26.1.0"
   },
   "devDependencies": {

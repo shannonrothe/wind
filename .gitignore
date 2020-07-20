@@ -1,4 +1,5 @@
-/src/wind.css
+src/App.tsx
+src/wind.css
 
 /node_modules/
 /public/
