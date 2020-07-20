@@ -7,6 +7,7 @@
 Wind provides a number of default components for use in your projects. The following components are currently available:
 
 - Button
+- Input
 
 ## Usage and Installation
 
