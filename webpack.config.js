@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.ts",
+  mode: process.env.NODE_ENV,
   output: {
     filename: "wind.bundle.js",
     path: path.resolve(__dirname, "dist"),

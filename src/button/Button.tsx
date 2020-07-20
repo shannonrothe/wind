@@ -22,36 +22,38 @@ const VARIANTS = {
   },
 };
 
-export const Button = ({ children, onClick, ...rest }: ButtonProps) => {
-  const { active, disabled, pointerEvents = false, variant = "primary" } = rest;
+export const Button = React.forwardRef(
+  ({ children, onClick, ...rest }: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
+    const { active, disabled, pointerEvents = false, variant = "primary" } = rest;
 
-  if (disabled) {
-    onClick = undefined;
+    if (disabled) {
+      onClick = undefined;
+    }
+
+    const classes = [
+      "outline-none",
+      "focus:outline-none",
+      "text-sm",
+      "font-bold",
+      "text-white",
+      VARIANTS[variant].bg,
+      !active && `hover:${VARIANTS[variant].hover}`,
+      "px-5",
+      "py-2",
+      "rounded",
+      "transition-colors",
+      "duration-100",
+      "ease-in",
+      active && VARIANTS[variant].active,
+      !pointerEvents && (disabled || active) && "pointer-events-none",
+      disabled && "opacity-50",
+      !disabled && pointerEvents && "focus:shadow-outline",
+    ];
+
+    return (
+      <button ref={ref} onClick={onClick} className={`${classes.join(" ")}`}>
+        {children}
+      </button>
+    );
   }
-
-  const classes = [
-    "outline-none",
-    "focus:outline-none",
-    "text-sm",
-    "font-bold",
-    "text-white",
-    VARIANTS[variant].bg,
-    !active && `hover:${VARIANTS[variant].hover}`,
-    "px-5",
-    "py-2",
-    "rounded",
-    "transition-colors",
-    "duration-100",
-    "ease-in",
-    active && VARIANTS[variant].active,
-    !pointerEvents && (disabled || active) && "pointer-events-none",
-    disabled && "opacity-50",
-    !disabled && pointerEvents && "focus:shadow-outline",
-  ];
-
-  return (
-    <button onClick={onClick} className={`${classes.join(" ")}`}>
-      {children}
-    </button>
-  );
-};
+);
