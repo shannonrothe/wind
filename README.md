@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/shannonrothe/wind.svg?style=shield&circle-token=fbfe23d0079bcc5ab8d1f110cc75b438befccc9b)](LINK)
+[![CircleCI](https://circleci.com/gh/shannonrothe/wind.svg?style=shield&circle-token=fbfe23d0079bcc5ab8d1f110cc75b438befccc9b)](https://circleci.com/gh/shannonrothe/wind.svg?style=shield&circle-token=fbfe23d0079bcc5ab8d1f110cc75b438befccc9b)
 
 # Wind
 
