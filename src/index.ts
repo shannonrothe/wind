@@ -1,9 +1,4 @@
-import "./wind.css";
-
-export type BaseProps = {
-  children?: string;
-  id?: string;
-};
+import "virtual:windi.css";
 
 export { Button } from "./button/Button";
 export { Input } from "./input/Input";

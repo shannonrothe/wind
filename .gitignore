@@ -2,8 +2,7 @@ src/App.tsx
 src/wind.css
 
 /node_modules/
-/public/
-/lib/
-/dist/
+dist/
+yarn-error.log
 
 .DS_Store

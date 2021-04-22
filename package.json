@@ -1,48 +1,50 @@
 {
   "name": "@shannonrothe/wind",
   "version": "1.0.8",
-  "description": "A simple React component library built on TailwindCSS",
-  "main": "dist/wind.bundle.js",
+  "description": "A simple React component library built on WindiCSS",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run build:css && npx webpack --config webpack.config.js",
-    "build:css": "postcss src/tailwind.css -o src/wind.css",
-    "test": "jest --passWithNoTests"
+    "build": "NODE_ENV=production tsdx build",
+    "start": "NODE_ENV=development tsdx watch",
+    "test": "tsdx test"
   },
   "keywords": [
     "react",
     "components",
-    "tailwindcss"
+    "windicss"
   ],
   "author": "Shannon Rothe",
   "license": "MIT",
-  "jest": {
-    "setupFiles": [
-      "./src/test-setup.js"
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/react": "^11.2.6",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "react-scripts": "^4.0.3",
+    "rollup-plugin-windicss": "^0.14.6",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "windicss": "^2.5.14",
+    "windicss-craco-plugin": "^0.1.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "@testing-library/jest-dom": "^5.11.1",
-    "@testing-library/react": "^10.4.7",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/react": "^16.9.43",
-    "autoprefixer": "^9.8.5",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^26.1.0",
-    "jest-dom": "^4.0.0",
-    "postcss-cli": "^7.1.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "style-loader": "^1.2.1",
-    "tailwindcss": "^1.5.1",
-    "ts-loader": "^8.0.1",
-    "typescript": "^3.9.7",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
